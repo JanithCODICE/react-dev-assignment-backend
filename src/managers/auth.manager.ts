@@ -1,6 +1,5 @@
 import { UserLoginDto } from "../types/interfaces/request/user-login";
 import { UserLoginResponse } from "../types/interfaces/response/user-login";
-import moment from "moment";
 import { TokenPayload, Tokens } from "../types/interfaces/token/token";
 import jwt from "jsonwebtoken";
 import { userRepository } from "../repository/user.repository";
