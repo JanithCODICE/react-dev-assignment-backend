@@ -7,6 +7,17 @@ interface ResponseData<T = null> {
   data?: T;
 }
 
+export interface PaginatedResult<R> {
+  entities: R[];
+  pagination: Pagination;
+}
+
+export interface Pagination {
+  totalRowCount: number;
+  pageSize: number;
+}
+
+
 export const handleError = (response: Response, error: Error): void => {
   const errResponse = new ErrorResponse(error);
   response.status(errResponse.statusCode).json(errResponse.serializeError());
